@@ -3,6 +3,8 @@ package list;
 import java.util.Random;
 
 /**
+ * 测试该包中List的各种实现
+ *
  * @author llliujw
  */
 public class ListTest {
@@ -17,23 +19,24 @@ public class ListTest {
         }
         System.out.println();
         test(new ArrayList(1));
+        test(new SignalLinkedList());
     }
 
-    private static void test(List myList){
+    private static void test(List myList) {
         System.out.println("==================================");
         myList.append(mock[0]);
         myList.append(mock[1]);
-        myList.insert(1,mock[2]);
-        myList.insert(1,mock[3]);
+        myList.insert(1, mock[2]);
+        myList.insert(1, mock[3]);
         System.out.println(myList.get(1));
-        myList.modify(1,mock[4]);
+        myList.modify(1, mock[4]);
         myList.forEach(System.out::print);
-        System.out.println(",size:"+myList.size());
+        System.out.println(",size:" + myList.size());
         myList.remove(2);
         myList.forEach(System.out::print);
-        System.out.println(",size:"+myList.size());
+        System.out.println(",size:" + myList.size());
         myList.removeLast();
         myList.forEach(System.out::print);
-        System.out.println(",size:"+myList.size());
+        System.out.println(",size:" + myList.size());
     }
 }

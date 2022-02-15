@@ -1,11 +1,11 @@
 package list;
 
 /**
- * 定义一个表需要实现的基本方法
+ * 定义一个表(列表)需要实现的基本方法
  *
  * @author llliujw
  */
-public interface List extends Iterable<Integer>{
+public interface List extends Iterable<Integer> {
 
     void insert(int pos, Integer value);
 
