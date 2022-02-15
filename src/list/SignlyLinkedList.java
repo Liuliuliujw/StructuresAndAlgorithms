@@ -7,7 +7,7 @@ import java.util.Iterator;
  *
  * @author llliujw
  */
-public class SignalLinkedList implements List {
+public class SignlyLinkedList implements List {
 
     /**
      * 头节点,第一个元素之前的节点
@@ -19,7 +19,7 @@ public class SignalLinkedList implements List {
      */
     private int size;
 
-    SignalLinkedList() {
+    SignlyLinkedList() {
         head = new Node(0);
         size = 0;
     }

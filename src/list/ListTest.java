@@ -19,7 +19,8 @@ public class ListTest {
         }
         System.out.println();
         test(new ArrayList(1));
-        test(new SignalLinkedList());
+        test(new SignlyLinkedList());
+        test(new DoublyLinkedList());
     }
 
     private static void test(List myList) {
