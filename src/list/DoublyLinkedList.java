@@ -90,11 +90,19 @@ public class DoublyLinkedList implements List {
         return size;
     }
 
+    /**
+     * 获取迭代器
+     *
+     * @return 迭代器
+     */
     @Override
     public Iterator<Integer> iterator() {
         return new Iter(head);
     }
 
+    /**
+     * 节点
+     */
     private static class Node {
         private int value;
         private Node prev;
@@ -107,6 +115,9 @@ public class DoublyLinkedList implements List {
         }
     }
 
+    /**
+     * 迭代器
+     */
     private static class Iter implements Iterator<Integer> {
 
         private Node temp;
