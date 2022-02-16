@@ -98,11 +98,19 @@ public class SignlyLinkedList implements List {
         return size;
     }
 
+    /**
+     * 获取迭代器
+     *
+     * @return 迭代器
+     */
     @Override
     public Iterator<Integer> iterator() {
         return new Iter(head);
     }
 
+    /**
+     * 节点
+     */
     private static class Node {
         private int value;
         private Node next;
@@ -112,6 +120,9 @@ public class SignlyLinkedList implements List {
         }
     }
 
+    /**
+     * 迭代器
+     */
     private static class Iter implements Iterator<Integer> {
 
         Node temp;
