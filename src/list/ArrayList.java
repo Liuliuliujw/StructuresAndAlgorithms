@@ -1,6 +1,5 @@
 package list;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -28,7 +27,7 @@ public class ArrayList implements List {
     private static final int DEFAULT_CAPACITY = 10;
 
     ArrayList() {
-        new ArrayList(DEFAULT_CAPACITY);
+        this(DEFAULT_CAPACITY);
     }
 
     ArrayList(int capacity) {
@@ -90,11 +89,19 @@ public class ArrayList implements List {
         capacity = capacity << 1;
     }
 
+    /**
+     * 获取迭代器
+     *
+     * @return 迭代器
+     */
     @Override
     public Iterator<Integer> iterator() {
         return new Iter(values, size);
     }
 
+    /**
+     * 迭代器
+     */
     static class Iter implements Iterator<Integer> {
 
         Integer[] target;
