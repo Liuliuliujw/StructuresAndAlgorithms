@@ -18,7 +18,7 @@ public class StackTest {
         //测试1
         String[] suffix1 = infix2Suffix(infix1);
         System.out.println(Arrays.toString(suffix1));
-        System.out.println(evalRPN(new LinkedStack(), suffix1));
+        System.out.println(evalRPN(new ArrayStack(), suffix1));
 
         //测试2
         String[] suffix2 = infix2Suffix(infix2);
