@@ -62,5 +62,4 @@ public class ArrayStack implements Stack {
         System.arraycopy(temp, 0, values, 0, capacity);
         capacity = capacity << 1;
     }
-
 }
