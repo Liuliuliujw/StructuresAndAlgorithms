@@ -145,5 +145,4 @@ public class StackTest {
         //如果栈顶元素是左括号且正在操作的是右括号，则左括号弹栈
         if (Objects.equals(srcStack.peek(), "(") && weight == RIGHT_BRACKET) srcStack.pop();
     }
-
 }
