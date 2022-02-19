@@ -7,7 +7,13 @@ package queue;
  */
 public class LinkedQueue<E> implements Queue<E> {
 
+    /**
+     * 队头
+     */
     private Node<E> front;
+    /**
+     * 队尾
+     */
     private Node<E> rear;
 
     LinkedQueue() {
