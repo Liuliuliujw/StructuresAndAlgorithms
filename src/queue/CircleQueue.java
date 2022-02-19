@@ -35,8 +35,8 @@ public class CircleQueue<E> implements Queue<E> {
         //队满返回false
         if (count == elementData.length) return false;
         //入队
-        elementData[front] = e;
-        if (++front == elementData.length) front = 0;//队头下标后移，若下标等于数组长度，置零
+        elementData[rear] = e;
+        if (++rear == elementData.length) rear = 0;//队头下标后移，若下标等于数组长度，置零
         count++;
         return true;
     }
@@ -46,14 +46,14 @@ public class CircleQueue<E> implements Queue<E> {
         //队空返回null
         if (count == 0) return null;
         //出队
-        E e = (E) elementData[rear];
-        if (++rear == elementData.length) rear = 0;//队尾下标后移，若下标等于数组长度，置零
+        E e = (E) elementData[front];
+        if (++front == elementData.length) front = 0;//队尾下标后移，若下标等于数组长度，置零
         count--;
         return e;
     }
 
     @Override
     public E peek() {
-        return count == 0 ? null : (E) elementData[rear];
+        return count == 0 ? null : (E) elementData[front];
     }
 }
