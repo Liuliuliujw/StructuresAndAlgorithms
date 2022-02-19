@@ -14,11 +14,11 @@ public class CircleQueue<E> implements Queue<E> {
     /**
      * 队头下标
      */
-    private int head;
+    private int front;
     /**
      * 队尾下标
      */
-    private int tail;
+    private int rear;
     /**
      * 队中元素个数
      */
@@ -26,7 +26,7 @@ public class CircleQueue<E> implements Queue<E> {
 
     CircleQueue(int capacity) {
         elementData = new Object[capacity];
-        head = tail = 0;
+        front = rear = 0;
         count = 0;
     }
 
@@ -35,8 +35,8 @@ public class CircleQueue<E> implements Queue<E> {
         //队满返回false
         if (count == elementData.length) return false;
         //入队
-        elementData[head] = e;
-        if (++head == elementData.length) head = 0;//队头下标后移，若下标等于数组长度，置零
+        elementData[front] = e;
+        if (++front == elementData.length) front = 0;//队头下标后移，若下标等于数组长度，置零
         count++;
         return true;
     }
@@ -46,14 +46,14 @@ public class CircleQueue<E> implements Queue<E> {
         //队空返回null
         if (count == 0) return null;
         //出队
-        E e = (E) elementData[tail];
-        if (++tail == elementData.length) tail = 0;//队尾下标后移，若下标等于数组长度，置零
+        E e = (E) elementData[rear];
+        if (++rear == elementData.length) rear = 0;//队尾下标后移，若下标等于数组长度，置零
         count--;
         return e;
     }
 
     @Override
     public E peek() {
-        return count == 0 ? null : (E) elementData[tail];
+        return count == 0 ? null : (E) elementData[rear];
     }
 }
