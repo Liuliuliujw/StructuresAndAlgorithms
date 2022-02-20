@@ -42,10 +42,10 @@ public class ArrayStack implements Stack {
         values[size++] = value;
     }
 
-
     @Override
     public Integer pop() {
-        return values[size--];
+        if (size == 0) throw new NullPointerException();
+        return values[--size];
     }
 
     @Override

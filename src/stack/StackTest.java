@@ -24,7 +24,6 @@ public class StackTest {
         String[] suffix2 = infix2Suffix(infix2);
         System.out.println(Arrays.toString(suffix2));
         System.out.println(evalRPN(new LinkedStack(), suffix2));
-
     }
 
     /**
@@ -55,7 +54,6 @@ public class StackTest {
                 }
             } else {
                 myStack.push(Integer.valueOf(item));
-
             }
         }
         return myStack.pop();
