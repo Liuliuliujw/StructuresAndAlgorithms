@@ -1,5 +1,7 @@
 package tree;
 
+import tree.node.BinaryNode;
+
 import java.util.*;
 
 /**
